@@ -3,6 +3,8 @@ title: "Home"
 date: 2022-04-10T15:08:51+02:00
 draft: false
 subtitle: Learning basic Hugo concepts
+menu: main
+weight: 10
 ---
 Hugo supports markdown, which enables you to do many things including **bold**, *italic*, and these examples below.
 

@@ -3,10 +3,17 @@
   <head>
     {{- partial "head" . -}}
   </head>
-  <body>
-    {{- partial "header" . -}}
-    {{- block "main" . }}{{- end }}
-    {{- partial "footer" . -}}
-    {{- partial "script-footer" . -}}
+  <body class="d-flex flex-column min-vh-100">
+    <header>
+      <!-- {{- partial "header" . -}} -->
+      {{- partial "navbar" . -}}
+    </header>
+    <main class="mb-auto">
+      {{- block "main" . }}{{- end }}
+    </main>
+    <footer>
+      {{- partial "footer" . -}}
+      {{- partial "script-footer" . -}}
+    </footer>
   </body>
 </html>

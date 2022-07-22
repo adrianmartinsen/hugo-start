@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">{{- .Site.Title -}}</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <ul class="navbar-nav">
+        {{ range .Site.Menus.main }}
+        <li class="nav-item">
+          <a class="nav-link {{ if $.IsMenuCurrent "main" . }} active" aria-current="page{{ end }}" href="{{ .URL }}">
+            {{ .Pre }}
+            <span>{{ .Name }}</span>
+          </a>
+        </li>
+        {{ end }}
+        {{ range .Site.Menus.external }}
+        <li class="nav-item">
+          <a href="{{ .URL }}" class="nav-link" target="_blank">
+            {{ .Pre }}
+            <span>{{ .Name }}</span>
+          </a>
+        {{ end }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

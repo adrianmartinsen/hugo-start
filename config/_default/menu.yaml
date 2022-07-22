@@ -1,0 +1,12 @@
+# Main menu for internal links, for page links see frontmatter
+# main:
+
+# External-menu adds target=_blank to anchor-tag for opening links in new tab
+external:
+# External links require HTTP-prefix
+- name: Github
+  url: http://www.github.com
+  weight: 90
+- name: Google
+  url: http://www.google.com
+  weight: 100

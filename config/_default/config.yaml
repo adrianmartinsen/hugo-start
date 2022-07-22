@@ -1,0 +1,12 @@
+baseURL: http://example.org/
+languageCode: en-us
+title: Hugo with Bootstrap
+
+# Enable use of HTML in Markdown
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+params:
+  # slogan: Super Fast! # used in title, see head-partial
